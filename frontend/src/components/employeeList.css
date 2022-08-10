@@ -1,0 +1,32 @@
+table{
+    padding: 0 3rem;
+    width: clamp(32rem, 80%, 200rem);
+    margin: 0 auto;
+}
+
+thead>tr{
+    background: var(--text-gray-600) !important;
+    color: var(--text-gray-200) !important;
+}
+
+th{
+    padding: 1rem;
+}
+
+td{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: .825rem;
+}
+
+tr{
+    background: var(--text-gray-100);
+}
+
+tr:nth-child(odd){
+    background: var(--text-gray-200);
+}
+
+tr:hover{
+    background: var(--text-gray-50);
+}

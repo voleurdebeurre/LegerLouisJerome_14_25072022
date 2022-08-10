@@ -1,0 +1,57 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.modal-content{
+    width: clamp(20rem, 25vw, 62rem);
+    border-radius: .5rem;
+    background-color: var(--text-gray-100);
+}
+
+.modal-header{
+    display: flex;
+    padding: .5rem 1rem;
+}
+
+
+.modal-header h2{
+    padding: 0;
+    margin: 0;
+    color: var(--text-gray-800);
+}
+
+.modal-header button{
+    border: none;
+    background: transparent;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+
+.modal-header button:hover{
+    border: none;
+    background: transparent;
+}
+
+.modal-header button svg{
+    width: 1rem;
+    fill: var(--text-sky-500);
+}
+
+.modal-header button:hover svg{
+    fill: var(--text-sky-300);
+}
+
+.modal-body{
+    padding: .5rem 1rem;
+}

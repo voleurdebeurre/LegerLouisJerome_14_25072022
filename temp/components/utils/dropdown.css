@@ -1,0 +1,19 @@
+select{
+    cursor: pointer;
+    padding: .5rem;
+    font-size: .825rem;
+    border: none;
+    border-bottom: 2px solid var(--text-gray-500);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--text-gray-100) url("../../assets/images/chevron-down-solid.svg") 96% / 15% no-repeat;
+    background-size: .825rem;
+    width: 100%;
+}
+
+label span{
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+}

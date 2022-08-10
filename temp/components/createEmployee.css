@@ -1,0 +1,94 @@
+.createEmployee{
+    background: white;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-form{
+    width: clamp(20rem, 25vw, 62rem);
+    border-radius: .5rem;
+    background-color: var(--text-gray-100);
+    padding: 3rem;
+    margin: 1rem 0;
+}
+
+.employee-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup, fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.formGroup label{
+    font-size: .825rem;
+    color: var(--text-gray-900);
+}
+
+.formGroup label span{
+    margin: 0; padding: 0 0 .4rem 0;
+}
+
+.formGroup input{
+    background-color: var(--text-gray-100);
+    padding: .5rem .25rem;
+    color: var(--text-gray-500);
+    border: 1px solid var(--text-gray-200);
+    border-bottom: 2px solid var(--text-gray-500);
+}
+
+.formGroup input:focus{
+    outline: none;
+}
+
+fieldset{
+    border: 1px solid var(--text-gray-200);
+    padding: 1.5rem;
+}
+fieldset .formGroup{
+    padding: .25rem 0;
+}
+
+fieldset legend{
+    font-size: .825rem;
+    color: var(--text-gray-500);
+}
+
+select{
+    cursor: pointer;
+    padding: .5rem;
+    font-size: .825rem;
+    border: none;
+    border: 1px solid var(--text-gray-200);
+    border-bottom: 2px solid var(--text-gray-500);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--text-gray-100) url("../assets/images/chevron-down-solid.svg") 96% / 15% no-repeat;
+    background-size: .825rem;
+    color: var(--text-gray-500);
+}
+
+button{
+    cursor: pointer;
+    margin-top: 2rem;
+    color: white;
+    background: var(--text-sky-600);
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    width: 100%;
+    font-weight: 600;
+    border: 2px solid var(--text-sky-600);
+}
+
+button:hover{
+    color: var(--text-sky-600);
+    background: var(--text-sky-200);
+}
