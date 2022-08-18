@@ -17,6 +17,7 @@ function Header() {
             <nav>
                 <ul>
                     <li><Link to="/employees">View current employees</Link></li>
+                    <li className='action-btn'><Link to="/">Create a new employee</Link></li>
                 </ul>
             </nav>
         </header>

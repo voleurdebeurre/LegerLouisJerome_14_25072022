@@ -9,8 +9,9 @@ function CreateEmployee() {
     // Declares state listener for the Modal
     const [show, setShow] = useState(false)
     // Gets the employees + method to add more from global storage    
-    const [allEmployees, setEmployee] = useContext(employeesContext);
-    console.log(allEmployees)
+    // const [allEmployees, setEmployee] = useContext(employeesContext);
+    const {allEmployees, setEmployee} = useContext(employeesContext)
+    console.log(allEmployees, setEmployee)
     
     // Declares states listeners for select elements
     const [stateInput, setStateInput] = useState('');
@@ -24,9 +25,9 @@ function CreateEmployee() {
         startDate : "",
         addressStreet: "",
         addressCity: "",
-        addressState: "",
+        addressState: "AL",
         addressZip: "",
-        employeeDepartment: "",
+        employeeDepartment: "Sales",
     })
 
     // Gets the selected option and updates newUser 
@@ -173,11 +174,11 @@ function CreateEmployee() {
                         <Dropdown
                             label="Department"
                             options={[
-                                { label: 'Sales', value: 'sales' },
-                                { label: 'Marketing', value: 'marketing' },
-                                { label: 'Engineering', value: 'engineering' },
-                                { label: 'Human Ressources', value: 'hr' },
-                                { label: 'Legal', value: 'legal' }
+                                { label: 'Sales', value: 'Sales' },
+                                { label: 'Marketing', value: 'Marketing' },
+                                { label: 'Engineering', value: 'Engineering' },
+                                { label: 'Human Ressources', value: 'HR' },
+                                { label: 'Legal', value: 'Legal' }
                             ]}
                             value={departmentInput}
                             onChange={handleDepartmentChange}

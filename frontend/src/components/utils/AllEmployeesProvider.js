@@ -1,26 +1,28 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useMemo } from 'react';
 
 //create a context, with createContext api
 export const employeesContext = createContext();
 
 const AllEmployeesProvider = (props) => {
     // this state will be shared with all components 
-    const initialState = [{
+    
+    const [allEmployees, setEmployee] = useState([{
         firstName : "Test",
         lastName : "User",
-        dateOfBirth: "15/10/2020",
-        startDate : "15/10/2020",
+        dateOfBirth: "2020-10-15",
+        startDate : "2020-10-15",
         addressStreet: "A Random Street",
         addressCity: "Random City",
         addressState: "AL",
         addressZip: "12345",
         employeeDepartment: "Sales",
-    }]
-    const [allEmployees, setEmployee] = useState(initialState);
-    
+    }]);
+    const value = useMemo(() => ({
+        allEmployees, setEmployee
+    }), [allEmployees, setEmployee]);
     return (
         // this is the provider providing state
-        <employeesContext.Provider value={[allEmployees, setEmployee]}>
+        <employeesContext.Provider value={value}>
             {props.children}
         </employeesContext.Provider>
     );

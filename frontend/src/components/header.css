@@ -17,6 +17,8 @@ header nav {
 
 header nav ul{
     list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
 header nav ul li a{
@@ -27,7 +29,19 @@ header nav ul li a{
     padding: .5rem 0;
 }
 
+header nav ul li.action-btn a{
+    color: var(--text-gray-100);
+    background-color: var(--text-sky-600);
+    border-radius: .275rem;
+    padding: .5rem 1rem;
+}
+
 header nav ul li a:hover{
     color: var(--text-sky-600);
     border-color: var(--text-sky-600);
+}
+
+header nav ul li.action-btn a:hover{
+    color: var(--text-sky-300);
+    border-color: var(--text-sky-400);
 }
