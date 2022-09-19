@@ -31,7 +31,7 @@ header nav ul li a{
 
 header nav ul li.action-btn a{
     color: var(--text-gray-100);
-    background-color: var(--text-sky-600);
+    background-color: var(--text-sky-700);
     border-radius: .275rem;
     padding: .5rem 1rem;
 }

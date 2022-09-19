@@ -1,57 +1,33 @@
-.modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .8);
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-}
-
-.modal-content{
+.modal-wrapper{
+    position: relative;
     width: clamp(20rem, 25vw, 62rem);
     border-radius: .5rem;
     background-color: var(--text-gray-100);
-}
-
-.modal-header{
+    margin: 0 auto;
+    padding: 1rem;
+    z-index: 6;
     display: flex;
-    padding: .5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.modal-header h2{
-    padding: 0;
-    margin: 0;
+.modal-wrapper h2{
+    padding: .5rem 1rem;
     color: var(--text-gray-800);
+    text-align: center;
 }
 
-.modal-header button{
-    border: none;
-    background: transparent;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
-}
-
-.modal-header button:hover{
-    border: none;
-    background: transparent;
-}
-
-.modal-header button svg{
-    width: 1rem;
-    fill: var(--text-sky-500);
-}
-
-.modal-header button:hover svg{
-    fill: var(--text-sky-300);
-}
-
-.modal-body{
+.modal-wrapper a{
+    color: var(--text-gray-100);
+    background-color: var(--text-sky-600);
+    border-radius: .275rem;
     padding: .5rem 1rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s linear;
+}
+
+.modal-wrapper a:hover{
+    color: var(--text-sky-300);
+    border-color: var(--text-sky-400);
 }

@@ -1,13 +1,16 @@
+import Modal from 'oc14-modal-library';
 import Dropdown from './utils/Dropdown';
-import Modal from './utils/Modal';
 import Datepicker from './utils/Datepicker';
 import './createEmployee.css';
+import './utils/modal.css';
 import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { employeesContext } from './utils/AllEmployeesProvider';
 
 function CreateEmployee() {
     // Declares state listener for the Modal
-    const [show, setShow] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const hideModal = () => showModal && setShowModal(false)
     // Gets the employees + method to add more from global storage    
     // const [allEmployees, setEmployee] = useContext(employeesContext);
     const {allEmployees, setEmployee} = useContext(employeesContext)
@@ -53,12 +56,17 @@ function CreateEmployee() {
         // Adds the new employee to the global storage array
         setEmployee(current => [...current, newEmployee])
         // Opens the success modal 
-        setShow(true)
+        setShowModal(true)
     };
 
     return(
         <>
-        <Modal onClose={() => setShow(false)} show={show} />
+        <Modal show={showModal} onClickCloseBtn={hideModal}>
+            <div className="modal-wrapper">
+                <h2>User created successfully</h2>
+                <Link to="/employees">View current employees</Link>
+            </div>
+        </Modal>
         <section className='createEmployee'>
             <h1>Create employee</h1>
             <div className="employee-form">

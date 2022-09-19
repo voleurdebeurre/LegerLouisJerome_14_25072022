@@ -1,7 +1,20 @@
-table{
-    padding: 0 3rem;
+.allEmployees{
     width: clamp(32rem, 80%, 200rem);
     margin: 0 auto;
+}
+
+.table-controls-top{
+    display: flex;
+}
+
+.table-controls-top select{
+    max-width: 20rem;
+    margin: 1rem 0;
+}
+
+table{
+    width: 100%;
+    padding: 0 3rem;
 }
 
 thead>tr{
@@ -29,4 +42,24 @@ tr:nth-child(odd){
 
 tr:hover{
     background: var(--text-gray-50);
+}
+
+.table-controls-bottom{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.pagination-buttons{
+    display: flex;
+    max-width: 30rem;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.pagination-buttons button{
+    margin: 0;
+}
+
+.global-search{
+    margin-left: auto;
 }
